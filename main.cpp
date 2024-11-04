@@ -18,6 +18,10 @@ int main() {
     board.movePlayerPiece(0, 0, -3);
     board.displayBoard();
 
+    std::cout << "Mut piesa 4 a primului jucator cu 4 pasi"<< std::endl;
+    board.movePlayerPiece(0, 3, 4);
+    board.displayBoard();
+
 
     //Testez daca toate piesele se pot muta simultan
     board.movePlayerPiece(1,0,2);
