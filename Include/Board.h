@@ -13,5 +13,5 @@ public:
     void displayBoard() const;
 
     friend std::ostream& operator<<(std::ostream& os, const Board& board);
-};
+}; // declara board cu o lista de jucatori si piese
 #endif //BOARD_H

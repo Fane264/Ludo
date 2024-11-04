@@ -8,19 +8,19 @@ class Piece {
     const int startPosition;
 
 public:
-    Piece(int startPos);
+    Piece(int startPos); // construcotrul clasei care priemeste parametrul aferent pozitie de start
 
-    Piece(const Piece& other);
+    Piece(const Piece& other); // constructor de copiere, pentru a crea o copie
 
-    Piece& operator=(const Piece& other);
+    Piece& operator=(const Piece& other);// operator de atribuire care permite atribuirea de valori dintr un alt obiect
 
-    ~Piece();
+    ~Piece(); // destructor
 
-    int getPosition() const;
-    void move(int steps);
-    bool isAtStart() const;
+    int getPosition() const; // returneaza pozitia curenta
+    void move(int steps); // muta un numar specific de pozitii
+    bool isAtStart() const; // verifica daca piesa se afla la pozitia initiale
 
-    friend std::ostream& operator<<(std::ostream& os, const Piece& piece);
+    friend std::ostream& operator<<(std::ostream& os, const Piece& piece); // creat pentru a permite afisarea direct cu std::cout
 };
 
 #endif //PIECE_H

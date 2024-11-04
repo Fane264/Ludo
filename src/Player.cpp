@@ -4,7 +4,7 @@ Player::Player(const std::string& playerName, int numPieces) : name(playerName) 
     for (int i = 0; i < numPieces; ++i) {
         pieces.emplace_back(0);  // fiecare piesă începe la poziția 0
     }
-}
+} // constructorul initializeaza numele si creeaza x obiecte la pozitia de start
 
 const std::string& Player::getName() const {
     return name;
@@ -24,5 +24,5 @@ std::ostream& operator<<(std::ostream& os, const Player& player) {
         os << piece << " ";
     }
     os << "])";
-    return os;
+    return os; // suprascrie "<<" pentru a afisa detalii despre jucatori
 }
