@@ -1,32 +1,38 @@
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include\Piece.h" // nu stiu de ce nu merge sa dau direct Piece.h sau Include/Piece.h ????
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Piece.h"
+#include <iostream>
 
-Piece::Piece(int startPos) : position(startPos), startPosition(startPos) {} // initializez pozitiile de start
 
-Piece::Piece(const Piece& other) : position(other.position), startPosition(other.startPosition) {} // acelasi lucru ca mai sus doar ca iau ce se afla in other
-
-Piece& Piece::operator=(const Piece& other) {
-    if (this != &other) {
-        position = other.position;
-    }
-    return *this;
-} // operatorul de atribuire verifica daca obiectul este diferit de cel curent
-
-Piece::~Piece() {} // destructorul
-
-int Piece::getPosition() const {
-    return position;
-} // returnez pozitia initiala
+Piece::Piece(int startPosition) : position(startPosition), isInBase(true) {}
 
 void Piece::move(int steps) {
-    position += steps;
-} // mut cu x pozitii date
+    if (isInBase && steps == 6) {
+        isInBase = false; // Piesa iese din bază
+        position = 1; // Prima poziție pe tablă
+    } else if (!isInBase) {
+        position += steps; // Actualizează poziția
+    }
+}
 
-bool Piece::isAtStart() const {
-    return position == startPosition;
-} // verific daca e la start
+bool Piece::canMove(int steps) const {
+    // Reguli de validare:
+    // 1. Dacă piesa este în bază, mutarea este validă doar dacă zarul arată 6.
+    // 2. Dacă piesa este deja pe tablă, mutarea este validă doar dacă nu depășește limita (poziția 57).
+    return isInBase ? steps == 6 : (position + steps <= 57);
+}
 
-std::ostream& operator<<(std::ostream& os, const Piece& piece) {
-    os << "Piece(position=" << piece.position << ")";
-    return os;
-} // suprascriu pentru a afisa mai frumos
+void Piece::reset() {
+    position = 0; // Resetează la bază
+    isInBase = true; // Marchează piesa ca fiind în bază
+}
 
+int Piece::getPosition() const {
+    return position; // Returnează poziția curentă
+}
+
+void Piece::displayInfo() const {
+    std::cout << "Piece at position: " << position << (isInBase ? " (In Base)" : "") << std::endl;
+}
+
+std::unique_ptr<GameEntity> Piece::clone() const {
+    return std::make_unique<Piece>(*this); // Returnează o copie a piesei
+}

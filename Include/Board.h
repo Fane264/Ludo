@@ -1,17 +1,21 @@
-
 #ifndef BOARD_H
 #define BOARD_H
-#include <vector>
-#include "Player.h"
 
+#include "Piece.h"
+#include <vector>
+
+/**
+ * @brief Clasa pentru gestionarea tablei de joc.
+ */
 class Board {
-    std::vector<Player> players;
+private:
+    int numPlayers;
+    std::vector<std::vector<Piece>> playerPieces;
 
 public:
-    Board(int numPlayers, int piecesPerPlayer);
-    void movePlayerPiece(int playerIndex, int pieceIndex, int steps);
+    Board(int players);
     void displayBoard() const;
+    bool movePiece(int playerId, int pieceId, int steps);
+};
 
-    friend std::ostream& operator<<(std::ostream& os, const Board& board);
-}; // declara board cu o lista de jucatori si piese
-#endif //BOARD_H
+#endif

@@ -1,37 +1,77 @@
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Player.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Piece.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/SpecialPiece.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Board.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Exceptions.h"
 #include <iostream>
-#include "Include/Board.h"
 
 int main() {
-    Board board(2,4);
-    std::cout <<"Starea initiala a tablei de joc"<< std::endl;
-    board.displayBoard();
+    try {
+        // Inițializare jucători
+        Player player1("Alice", 0);
+        Player player2("Bob", 0);
 
-    std::cout <<"\nMut piesa 0 a primului jucator cu 3 pasi\n"<< std::endl;
-    board.movePlayerPiece(0, 0, 3);
-    board.displayBoard();
+        // Afișarea informațiilor despre jucători
+        std::cout << "=== Players ===" << std::endl;
+        player1.displayInfo();
+        player2.displayInfo();
 
-    std::cout <<"\nMut piesa 1 a celui de-al doilea jucator cu 5 pasi\n"<< std::endl;
-    board.movePlayerPiece(1, 2, 5);
-    board.displayBoard();
+        // Crearea tablei de joc pentru 2 jucători
+        Board board(2);
 
-    std::cout <<"\nMut piesa 0 a primului jucator inapoi la start\n"<< std::endl;
-    board.movePlayerPiece(0, 0, -3);
-    board.displayBoard();
+        std::cout << "\n=== Initial Board ===" << std::endl;
+        board.displayBoard();
 
-    std::cout << "\nMut piesa 4 a primului jucator cu 4 pasi\n"<< std::endl;
-    board.movePlayerPiece(0, 3, 4);
-    board.displayBoard();
+        // Mutarea pieselor și demonstrarea funcționalității
+        std::cout << "\n=== Gameplay ===" << std::endl;
 
+        std::cout << "Player 1 rolls a 6 and moves piece 0...\n";
+        try {
+            board.movePiece(0, 0, 6); // Jucătorul 1 mută piesa 0
+        } catch (const InvalidMoveException& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
+        board.displayBoard();
 
-    //Testez daca toate piesele se pot muta simultan
-    board.movePlayerPiece(1,0,2);
-    board.movePlayerPiece(1,1,3);
-    board.movePlayerPiece(1,2,4);
-    board.movePlayerPiece(1,3,7);
-    board.displayBoard();
+        std::cout << "Player 2 rolls a 4 and tries to move piece 0...\n";
+        try {
+            board.movePiece(1, 0, 4); // Jucătorul 2 încearcă să mute piesa 0
+        } catch (const InvalidMoveException& e) {
+            std::cerr << "Error: " << e.what() << std::endl; // Mutare invalidă
+        }
+        board.displayBoard();
 
-    std::cout <<"\nStarea finala a tablei de joc\n"<< std::endl;
-    board.displayBoard();
+        std::cout << "Player 1 rolls a 3 and moves piece 0 again...\n";
+        try {
+            board.movePiece(0, 0, 3); // Jucătorul 1 mută din nou piesa 0
+        } catch (const InvalidMoveException& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
+        board.displayBoard();
 
+        std::cout << "Player 2 rolls a 6 and moves piece 0...\n";
+        try {
+            board.movePiece(1, 0, 6); // Jucătorul 2 mută piesa 0
+        } catch (const InvalidMoveException& e) {
+            std::cerr << "Error: " << e.what() << std::endl;
+        }
+        board.displayBoard();
+
+        // Demonstrăm o piesă specială
+        SpecialPiece specialPiece(0, true);
+        std::cout << "\n=== Special Piece ===" << std::endl;
+        specialPiece.displayInfo();
+
+        std::cout << "\nCloning special piece...\n";
+        auto clonedPiece = specialPiece.clone(); // Clonare piesă
+        clonedPiece->displayInfo();
+
+    } catch (const GameException& e) {
+        std::cerr << "Game error: " << e.what() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Unexpected error: " << e.what() << std::endl;
+    }
+
+    std::cout << "\nGame Over!" << std::endl;
     return 0;
 }

@@ -51,6 +51,11 @@ add_executable(${PROJECT_NAME}
         src/Player.cpp
         Include/Board.h
         src/Board.cpp
+        Include/GameEntity.h
+        Include/SpecialPiece.h
+        Include/GameException.h
+        Include/Exceptions.h
+        src/SpecialPiece.cpp
 )
 
 include(cmake/CompilerFlags.cmake)

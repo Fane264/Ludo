@@ -1,27 +1,33 @@
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include\Board.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Board.h"
+#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Exceptions.h"
 
-Board::Board(int numPlayers, int piecesPerPlayer) {
-    for (int i = 0; i < numPlayers; ++i) {
-        players.emplace_back("Player " + std::to_string(i + 1), piecesPerPlayer);
-    }
-} // creez jucatori si piese pentru fiecare
-
-void Board::movePlayerPiece(int playerIndex, int pieceIndex, int steps) {
-    players[playerIndex].movePiece(pieceIndex, steps);
-}//mut piesa a unui jucator specific
+Board::Board(int players) : numPlayers(players), playerPieces(players, std::vector<Piece>(4)) {}
 
 void Board::displayBoard() const {
-    for (const auto& player : players) {
-        std::cout << player << std::endl;
+    std::cout << "Current Board State:\n";
+    for (int player = 0; player < numPlayers; ++player) {
+        std::cout << "Player " << player + 1 << ": ";
+        for (const auto& piece : playerPieces[player]) {
+            std::cout << piece.getPosition() << " "; // Acces corect al poziției piesei
+        }
+        std::cout << std::endl;
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const Board& board) {
-    os << "Board(players=[";
-    for (const auto& player : board.players) {
-        os << player << " ";
+bool Board::movePiece(int playerId, int pieceId, int steps) {
+    if (playerId < 0 || playerId >= numPlayers || pieceId < 0 || pieceId >= 4) {
+        throw InvalidMoveException(); // Jucător sau piesă invalidă
     }
-    os << "])";
-    return os;
-} // afisez modificarile fiecarui jucator si suprascriu pentru o afisare frumoasa si detaliata
+    Piece& piece = playerPieces[playerId][pieceId];
+    if (piece.canMove(steps)) {
+        piece.move(steps);
+        return true;
+    }
 
+    // Mesaj detaliat despre mutarea invalidă
+    std::cerr << "Invalid move! Player " << playerId + 1
+              << " tried to move piece " << pieceId
+              << " by " << steps << " steps.\n";
+    throw InvalidMoveException();
+    return false; // Evită warning-ul
+}
