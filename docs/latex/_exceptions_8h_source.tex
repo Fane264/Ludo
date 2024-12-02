@@ -1,0 +1,27 @@
+\doxysection{Exceptions.\+h}
+\hypertarget{_exceptions_8h_source}{}\label{_exceptions_8h_source}\index{Include/Exceptions.h@{Include/Exceptions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXCEPTIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXCEPTIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameException.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_invalid_move_exception}{InvalidMoveException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_exception}{GameException}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_invalid_move_exception}{InvalidMoveException}}()\ :\ \mbox{\hyperlink{class_game_exception}{GameException}}(\textcolor{stringliteral}{"{}Invalid\ move!"{}})\ \{\}}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_exception}{PlayerException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_exception}{GameException}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_player_exception}{PlayerException}}()\ :\ \mbox{\hyperlink{class_game_exception}{GameException}}(\textcolor{stringliteral}{"{}Player-\/related\ error!"{}})\ \{\}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_general_game_exception}{GeneralGameException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_exception}{GameException}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_general_game_exception}{GeneralGameException}}()\ :\ \mbox{\hyperlink{class_game_exception}{GameException}}(\textcolor{stringliteral}{"{}General\ game\ error!"{}})\ \{\}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

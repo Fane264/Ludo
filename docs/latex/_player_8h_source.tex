@@ -1,0 +1,24 @@
+\doxysection{Player.\+h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\index{Include/Player.h@{Include/Player.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameEntity.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_entity}{GameEntity}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}(\textcolor{keyword}{const}\ std::string\&\ playerName,\ \textcolor{keywordtype}{int}\ playerScore);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a12b38c5e390b0b4d23d23a35297f2b11}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00018\ \ \ \ \ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_player_a0ad44661a3fc719fc28003c7b659a8b5}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

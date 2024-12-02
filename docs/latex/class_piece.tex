@@ -1,0 +1,151 @@
+\doxysection{Piece Class Reference}
+\hypertarget{class_piece}{}\label{class_piece}\index{Piece@{Piece}}
+
+
+Clasa care reprezintă o piesă de joc.  
+
+
+
+
+{\ttfamily \#include $<$Piece.\+h$>$}
+
+Inheritance diagram for Piece\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_piece}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}{Piece}} (int start\+Position=0)
+\begin{DoxyCompactList}\small\item\em Constructorul implicit pentru \doxylink{class_piece}{Piece}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_ac00784460aec8ce22ae645e98b1bda3f}{move}} (int steps)
+\begin{DoxyCompactList}\small\item\em Mută piesa un număr de pași pe tablă. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_piece_a9f267e79c575d5b20fd49a847edb6b11}{can\+Move}} (int steps) const
+\begin{DoxyCompactList}\small\item\em Verifică dacă piesa poate fi mutată un anumit număr de pași. \end{DoxyCompactList}\item 
+\Hypertarget{class_piece_a5608c68b3809247e8c327519c742b08b}\label{class_piece_a5608c68b3809247e8c327519c742b08b} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Resetează piesa la poziția inițială (bază). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_piece_a5deedc83dd31141563b4fef5e3a3097c}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Obține poziția curentă a piesei. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_a5cc39d688a37612f5798439fca259a11}{display\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Afișează informațiile despre piesă. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{class_piece_a53ec796e05c52523ad14951b1ecc3785}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creează o copie a piesei. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_entity}{Game\+Entity}}}
+
+
+\doxysubsection{Detailed Description}
+Clasa care reprezintă o piesă de joc. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily \label{class_piece_a7a8296e9f9206426a9d67e50dd50dd76} 
+Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{int}]{start\+Position}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructorul implicit pentru \doxylink{class_piece}{Piece}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Position} & Poziția inițială a piesei (default\+: 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_piece_a9f267e79c575d5b20fd49a847edb6b11}\index{Piece@{Piece}!canMove@{canMove}}
+\index{canMove@{canMove}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{canMove()}{canMove()}}
+{\footnotesize\ttfamily \label{class_piece_a9f267e79c575d5b20fd49a847edb6b11} 
+bool Piece\+::can\+Move (\begin{DoxyParamCaption}\item[{int}]{steps}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifică dacă piesa poate fi mutată un anumit număr de pași. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & Numărul de pași verificați. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true dacă mutarea este permisă, altfel false. 
+\end{DoxyReturn}
+\Hypertarget{class_piece_a53ec796e05c52523ad14951b1ecc3785}\index{Piece@{Piece}!clone@{clone}}
+\index{clone@{clone}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_piece_a53ec796e05c52523ad14951b1ecc3785} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ Piece\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creează o copie a piesei. 
+
+\begin{DoxyReturn}{Returns}
+Un pointer inteligent la o copie a obiectului curent. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_entity_a541cfc0e307116e7fe98912d5b8edb4e}{Game\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_special_piece_ab3708e0f572d54f509e6c7196658c061}{Special\+Piece}}.
+
+\Hypertarget{class_piece_a5cc39d688a37612f5798439fca259a11}\index{Piece@{Piece}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily \label{class_piece_a5cc39d688a37612f5798439fca259a11} 
+void Piece\+::display\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Afișează informațiile despre piesă. 
+
+
+
+Implements \mbox{\hyperlink{class_game_entity_ae83f4e77fbceb81406b513ec917a0993}{Game\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_special_piece_a4d2bfce207c0668757ac28346293cdad}{Special\+Piece}}.
+
+\Hypertarget{class_piece_a5deedc83dd31141563b4fef5e3a3097c}\index{Piece@{Piece}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_piece_a5deedc83dd31141563b4fef5e3a3097c} 
+int Piece\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obține poziția curentă a piesei. 
+
+\begin{DoxyReturn}{Returns}
+Poziția curentă a piesei. 
+\end{DoxyReturn}
+\Hypertarget{class_piece_ac00784460aec8ce22ae645e98b1bda3f}\index{Piece@{Piece}!move@{move}}
+\index{move@{move}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_piece_ac00784460aec8ce22ae645e98b1bda3f} 
+void Piece\+::move (\begin{DoxyParamCaption}\item[{int}]{steps}{}\end{DoxyParamCaption})}
+
+
+
+Mută piesa un număr de pași pe tablă. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & Numărul de pași de mutat. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Include/Piece.\+h\item 
+src/Piece.\+cpp\end{DoxyCompactItemize}

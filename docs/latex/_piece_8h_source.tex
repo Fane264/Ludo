@@ -1,0 +1,33 @@
+\doxysection{Piece.\+h}
+\hypertarget{_piece_8h_source}{}\label{_piece_8h_source}\index{Include/Piece.h@{Include/Piece.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PIECE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PIECE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameEntity.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_piece}{Piece}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_entity}{GameEntity}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ position;\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInBase;\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}{Piece}}(\textcolor{keywordtype}{int}\ startPosition\ =\ 0);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_ac00784460aec8ce22ae645e98b1bda3f}{move}}(\textcolor{keywordtype}{int}\ steps);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_piece_a9f267e79c575d5b20fd49a847edb6b11}{canMove}}(\textcolor{keywordtype}{int}\ steps)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a5608c68b3809247e8c327519c742b08b}{reset}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_a5deedc83dd31141563b4fef5e3a3097c}{getPosition}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Adăugat\ pentru\ acces\ la\ poziție}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a5cc39d688a37612f5798439fca259a11}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_piece_a53ec796e05c52523ad14951b1ecc3785}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

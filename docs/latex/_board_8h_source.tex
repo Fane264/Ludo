@@ -1,0 +1,24 @@
+\doxysection{Board.\+h}
+\hypertarget{_board_8h_source}{}\label{_board_8h_source}\index{Include/Board.h@{Include/Board.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOARD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOARD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Piece.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board}{Board}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ numPlayers;}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<std::vector<Piece>>\ playerPieces;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_board}{Board}}(\textcolor{keywordtype}{int}\ players);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ displayBoard()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ movePiece(\textcolor{keywordtype}{int}\ playerId,\ \textcolor{keywordtype}{int}\ pieceId,\ \textcolor{keywordtype}{int}\ steps);}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

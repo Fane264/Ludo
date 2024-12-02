@@ -1,0 +1,84 @@
+\doxysection{Special\+Piece Class Reference}
+\hypertarget{class_special_piece}{}\label{class_special_piece}\index{SpecialPiece@{SpecialPiece}}
+
+
+Clasa pentru o piesă specială cu abilități suplimentare.  
+
+
+
+
+{\ttfamily \#include $<$Special\+Piece.\+h$>$}
+
+Inheritance diagram for Special\+Piece\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_special_piece}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_special_piece_ab956aee3721646e4dae7ae0d60b58fe6}\label{class_special_piece_ab956aee3721646e4dae7ae0d60b58fe6} 
+{\bfseries Special\+Piece} (int start\+Position=0, bool power=false)
+\item 
+void \mbox{\hyperlink{class_special_piece_a4d2bfce207c0668757ac28346293cdad}{display\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Afișează informațiile despre piesă. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{class_special_piece_ab3708e0f572d54f509e6c7196658c061}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creează o copie a piesei. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_piece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}{Piece}} (int start\+Position=0)
+\begin{DoxyCompactList}\small\item\em Constructorul implicit pentru \doxylink{class_piece}{Piece}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piece_ac00784460aec8ce22ae645e98b1bda3f}{move}} (int steps)
+\begin{DoxyCompactList}\small\item\em Mută piesa un număr de pași pe tablă. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_piece_a9f267e79c575d5b20fd49a847edb6b11}{can\+Move}} (int steps) const
+\begin{DoxyCompactList}\small\item\em Verifică dacă piesa poate fi mutată un anumit număr de pași. \end{DoxyCompactList}\item 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Resetează piesa la poziția inițială (bază). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_piece_a5deedc83dd31141563b4fef5e3a3097c}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Obține poziția curentă a piesei. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_entity}{Game\+Entity}}}
+
+
+\doxysubsection{Detailed Description}
+Clasa pentru o piesă specială cu abilități suplimentare. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_special_piece_ab3708e0f572d54f509e6c7196658c061}\index{SpecialPiece@{SpecialPiece}!clone@{clone}}
+\index{clone@{clone}!SpecialPiece@{SpecialPiece}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_special_piece_ab3708e0f572d54f509e6c7196658c061} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ Special\+Piece\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creează o copie a piesei. 
+
+\begin{DoxyReturn}{Returns}
+Un pointer inteligent la o copie a obiectului curent. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_a53ec796e05c52523ad14951b1ecc3785}{Piece}}.
+
+\Hypertarget{class_special_piece_a4d2bfce207c0668757ac28346293cdad}\index{SpecialPiece@{SpecialPiece}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!SpecialPiece@{SpecialPiece}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily \label{class_special_piece_a4d2bfce207c0668757ac28346293cdad} 
+void Special\+Piece\+::display\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Afișează informațiile despre piesă. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_a5cc39d688a37612f5798439fca259a11}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Include/Special\+Piece.\+h\item 
+src/Special\+Piece.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Clasa pentru un jucător în joc.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_a2721a8e89d8c3ccaf2600d9815b66bec}\label{class_player_a2721a8e89d8c3ccaf2600d9815b66bec} 
+{\bfseries Player} (const std\+::string \&player\+Name, int player\+Score)
+\item 
+void \mbox{\hyperlink{class_player_a12b38c5e390b0b4d23d23a35297f2b11}{display\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Afișează informațiile despre entitate. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{class_player_a0ad44661a3fc719fc28003c7b659a8b5}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creează o copie a obiectului. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_entity}{Game\+Entity}}}
+
+
+\doxysubsection{Detailed Description}
+Clasa pentru un jucător în joc. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_a0ad44661a3fc719fc28003c7b659a8b5}\index{Player@{Player}!clone@{clone}}
+\index{clone@{clone}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_player_a0ad44661a3fc719fc28003c7b659a8b5} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ Player\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creează o copie a obiectului. 
+
+\begin{DoxyReturn}{Returns}
+Un pointer inteligent la o copie a obiectului. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_entity_a541cfc0e307116e7fe98912d5b8edb4e}{Game\+Entity}}.
+
+\Hypertarget{class_player_a12b38c5e390b0b4d23d23a35297f2b11}\index{Player@{Player}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily \label{class_player_a12b38c5e390b0b4d23d23a35297f2b11} 
+void Player\+::display\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Afișează informațiile despre entitate. 
+
+
+
+Implements \mbox{\hyperlink{class_game_entity_ae83f4e77fbceb81406b513ec917a0993}{Game\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Include/Player.\+h\item 
+src/Player.\+cpp\end{DoxyCompactItemize}

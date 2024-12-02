@@ -1,0 +1,22 @@
+\doxysection{Special\+Piece.\+h}
+\hypertarget{_special_piece_8h_source}{}\label{_special_piece_8h_source}\index{Include/SpecialPiece.h@{Include/SpecialPiece.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SPECIALPIECE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SPECIALPIECE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Piece.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_special_piece}{SpecialPiece}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_piece}{Piece}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasPower;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_special_piece}{SpecialPiece}}(\textcolor{keywordtype}{int}\ startPosition\ =\ 0,\ \textcolor{keywordtype}{bool}\ power\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_special_piece_a4d2bfce207c0668757ac28346293cdad}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00016\ \ \ \ \ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_special_piece_ab3708e0f572d54f509e6c7196658c061}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
