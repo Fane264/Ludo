@@ -9,11 +9,11 @@
  */
 class GameException : public std::exception {
 protected:
-    std::string message;
+    std::string message; // mesajul de eroare
 
 public:
-    explicit GameException(const std::string& msg) : message(msg) {}
-    const char* what() const noexcept override { return message.c_str(); }
+    explicit GameException(const std::string& msg) : message(msg) {} // constructor cu mesaj
+    const char* what() const noexcept override { return message.c_str(); } // returneaza mesagiul
 };
 
 #endif

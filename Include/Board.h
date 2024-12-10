@@ -9,13 +9,13 @@
  */
 class Board {
 private:
-    int numPlayers;
-    std::vector<std::vector<Piece>> playerPieces;
+    int numPlayers; // variabila pentru numarul de jucatori
+    std::vector<std::vector<Piece>> playerPieces; // matrice pentru stocarea pieselor fiecarui jucator
 
 public:
-    Board(int players);
-    void displayBoard() const;
-    bool movePiece(int playerId, int pieceId, int steps);
+    Board(int players); // constructorul clasei care initializeaza cu un numar de jucatori
+    void displayBoard() const; // afiseaza starea curenta a tablei
+    bool movePiece(int playerId, int pieceId, int steps); // muta o piesa pe tabla si verifica validitatea acesteia
 };
 
 #endif
