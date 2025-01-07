@@ -5,17 +5,22 @@
 #include <string>
 
 /**
- * @brief Clasa pentru un jucător în joc.
+ * @brief Clasa pentru un jucător din joc.
  */
 class Player : public GameEntity {
 private:
-    std::string name; // nume jucator
-    int score; // scorul jucatorului
+    std::string name; // Numele jucătorului
+    int score;        // Scorul jucătorului
 
 public:
-    Player(const std::string& playerName, int playerScore); // constructor
-    void displayInfo() const override; // afiseaza informatiile despre jucaotr
-    std::unique_ptr<GameEntity> clone() const override; // realizeaza o copie a jucatorului
+    Player(const std::string& playerName, int playerScore);
+
+    void incrementScore();           // Crește scorul jucătorului
+    std::string getName() const;     // Obține numele
+    int getScore() const;            // Obține scorul
+
+    void displayInfo() const override; // Afișează informațiile despre jucător
+    std::unique_ptr<GameEntity> clone() const override; // Creează o copie
 };
 
-#endif
+#endif // PLAYER_H

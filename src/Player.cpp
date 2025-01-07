@@ -1,11 +1,24 @@
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Player.h"
 
-Player::Player(const std::string& playerName, int playerScore) : name(playerName), score(playerScore) {} // constructor care initializeaza nume si scor
+Player::Player(const std::string& playerName, int playerScore)
+    : name(playerName), score(playerScore) {}
+
+void Player::incrementScore() {
+    ++score;
+}
+
+std::string Player::getName() const {
+    return name;
+}
+
+int Player::getScore() const {
+    return score;
+}
 
 void Player::displayInfo() const {
-    std::cout << "Player: " << name << ", Score: " << score << std::endl; // afiseaza informatiile playerului
+    std::cout << "Player: " << name << ", Score: " << score << std::endl;
 }
 
 std::unique_ptr<GameEntity> Player::clone() const {
-    return std::make_unique<Player>(*this); // face o copie si returneaza un pointer inteligent
+    return std::make_unique<Player>(*this);
 }

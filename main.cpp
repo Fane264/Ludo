@@ -4,73 +4,74 @@
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Board.h"
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Exceptions.h"
 #include <iostream>
+#include <random>
+#include <string>
+#include <vector>
+
+/**
+ * @brief Funcție pentru a simula aruncarea zarului.
+ * @return Valoarea zarului, cu șanse mai mari pentru 6.
+ */
+int rollDice() {
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::discrete_distribution<> dist({1, 1, 1, 1, 1, 5}); // Șanse mai mari pentru 6
+    return dist(gen) + 1;
+}
 
 int main() {
     try {
-        Player player1("Stefan", 0);
-        Player player2("Gigel", 0); // creez jucatorii
+        std::cout << "=== Welcome to Ludo! ===" << std::endl;
 
+        int numPlayers = 2; // Număr de jucători
+        int piecesPerPlayer = 4; // Număr de piese pe jucător
+        Board board(numPlayers, piecesPerPlayer);
 
-        std::cout << "=== Players ===" << std::endl;
-        player1.displayInfo();
-        player2.displayInfo(); // afisez informatiile despre jucatori
+        std::vector<std::string> playerNames = {"Player 1", "Player 2"};
+        std::vector<int> scores(numPlayers, 0);
 
+        int currentPlayer = 0; // Jucătorul curent
+        while (!board.checkGameOver()) {
+            std::cout << "\n=== Current Board State ===" << std::endl;
+            board.displayBoard();
 
-        Board board(2); // creez tabla pentru 2 jucatori
+            std::cout << playerNames[currentPlayer] << ", type 'Roll' to roll the dice: ";
+            std::string input;
+            std::cin >> input;
 
-        std::cout << "\n=== Initial Board ===" << std::endl;
-        board.displayBoard(); // afisez starea initiala a tablei
+            if (input != "Roll") {
+                std::cout << "Invalid command. Please type 'Roll' to continue.\n";
+                continue;
+            }
 
+            int diceRoll = rollDice();
+            std::cout << "You rolled a " << diceRoll << "!" << std::endl;
 
-        std::cout << "\n=== Gameplay ===" << std::endl;
+            if (diceRoll == 6) {
+                std::cout << "You get another turn after this move!" << std::endl;
+            }
 
-        std::cout << "Player 1 rolls a 6 and moves piece 0...\n";
-        try {
-            board.movePiece(0, 0, 6); // jucatorul 1 muta piesa 0
-        } catch (const InvalidMoveException& e) {
-            std::cerr << "Error: " << e.what() << std::endl; // daca nu e valida mutarea, intra pe exceptie
+            // Alege piesa de mutat
+            std::cout << "Choose a piece to move (0-" << piecesPerPlayer - 1 << "): ";
+            int pieceId;
+            std::cin >> pieceId;
+
+            if (!board.movePiece(currentPlayer, pieceId, diceRoll)) {
+                std::cout << "Invalid move. Try again!" << std::endl;
+                continue; // Rămâne același jucător
+            }
+
+            // Dacă zarul NU este 6, trece la următorul jucător
+            if (diceRoll != 6) {
+                currentPlayer = (currentPlayer + 1) % numPlayers;
+            }
         }
-        board.displayBoard();
 
-        std::cout << "Player 2 rolls a 4 and tries to move piece 0...\n";
-        try {
-            board.movePiece(1, 0, 4);
-        } catch (const InvalidMoveException& e) {
-            std::cerr << "Error: " << e.what() << std::endl;
-        }
-        board.displayBoard();
+        std::cout << "=== Game Over! ===" << std::endl;
 
-        std::cout << "Player 1 rolls a 3 and moves piece 0 again...\n";
-        try {
-            board.movePiece(0, 0, 3);
-        } catch (const InvalidMoveException& e) {
-            std::cerr << "Error: " << e.what() << std::endl;
-        }
-        board.displayBoard();
-
-        std::cout << "Player 2 rolls a 6 and moves piece 0...\n";
-        try {
-            board.movePiece(1, 0, 6);
-        } catch (const InvalidMoveException& e) {
-            std::cerr << "Error: " << e.what() << std::endl;
-        }
-        board.displayBoard();
-
-
-        SpecialPiece specialPiece(0, true); // creez piesa speciala
-        std::cout << "\n=== Special Piece ===" << std::endl;
-        specialPiece.displayInfo(); // ii afisez informatiile
-
-        std::cout << "\nCloning special piece...\n";
-        auto clonedPiece = specialPiece.clone(); // clonez piesa speciala
-        clonedPiece->displayInfo();
-
-    } catch (const GameException& e) {
-        std::cerr << "Game error: " << e.what() << std::endl;
     } catch (const std::exception& e) {
-        std::cerr << "Unexpected error: " << e.what() << std::endl; // prinde exceptiile generale ale jocului si le afiseaza mesajele
+        std::cerr << "Unexpected error: " << e.what() << std::endl;
     }
 
-    std::cout << "\nGame Over!" << std::endl;
     return 0;
 }
