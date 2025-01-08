@@ -12,18 +12,6 @@ include(cmake/Options.cmake)
 
 ###############################################################################
 
-# Include SFML
-# Actualizează această cale pentru a indica locația exactă unde se află fișierul SFMLConfig.cmake
-set(SFML_DIR "C:/SFML/lib/cmake/SFML") # Schimbă C:SFML-3.0.0/lib/cmake/SFML în C:/SFML/lib/cmake/SFML
-
-# Asigură-te că prefixul este setat corect pentru căutare suplimentară
-list(APPEND CMAKE_PREFIX_PATH "C:/SFML")
-
-# Găsește pachetul SFML
-find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
-
-###############################################################################
-
 # NOTE: update executable name in .github/workflows/cmake.yml:25 when changing name here
 add_executable(${PROJECT_NAME}
         main.cpp
@@ -40,14 +28,6 @@ add_executable(${PROJECT_NAME}
 )
 
 include(cmake/CompilerFlags.cmake)
-
-###############################################################################
-
-# Link SFML libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE sfml-graphics sfml-window sfml-system)
-
-# Include directories for SFML
-target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE ${SFML_INCLUDE_DIR})
 
 ###############################################################################
 
