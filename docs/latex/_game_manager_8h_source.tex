@@ -1,0 +1,33 @@
+\doxysection{Game\+Manager.\+h}
+\hypertarget{_game_manager_8h_source}{}\label{_game_manager_8h_source}\index{Include/GameManager.h@{Include/GameManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAMEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Board.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_manager}{GameManager}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ std::unique\_ptr<Board>\ board;\ }
+\DoxyCodeLine{00016\ \ std::vector<std::string>\ playerNames;\ }
+\DoxyCodeLine{00017\ \ \textcolor{keywordtype}{int}\ currentPlayer\ =\ 0;\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \textcolor{comment}{//\ Constructor\ privat\ pentru\ Singleton}}
+\DoxyCodeLine{00020\ \ \mbox{\hyperlink{class_game_manager}{GameManager}}()\ :\ board(\textcolor{keyword}{nullptr}),\ playerNames\{\},\ currentPlayer(0)\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \mbox{\hyperlink{class_game_manager}{GameManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_manager}{GameManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00024\ \ \mbox{\hyperlink{class_game_manager}{GameManager}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_manager}{GameManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_game_manager}{GameManager}}\&\ \mbox{\hyperlink{class_game_manager_a62c0bd2e38276cc3805fb38a85890d42}{getInstance}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_manager_ae272eb0bf4e4987797fcff97723819cc}{startGame}}();}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMEMANAGER\_H}}
+
+\end{DoxyCode}

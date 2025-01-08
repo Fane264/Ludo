@@ -17,7 +17,7 @@ private:
  int currentPlayer = 0; ///< Jucătorul curent (inițializat la 0)
 
  // Constructor privat pentru Singleton
- GameManager() : currentPlayer(0), board(nullptr), playerNames{} {}
+ GameManager() : board(nullptr), playerNames{}, currentPlayer(0) {}
 
 public:
  GameManager(const GameManager&) = delete;

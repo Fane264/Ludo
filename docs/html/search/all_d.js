@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['titlu_20proiect_0',['Titlu proiect',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['startgame_0',['startGame',['../class_game_manager.html#ae272eb0bf4e4987797fcff97723819cc',1,'GameManager']]]
 ];

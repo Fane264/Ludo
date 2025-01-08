@@ -1,4 +1,4 @@
-#include"C:/Users/Fane/Documents/GitHub/Ludo/Include/GameManager.h"
+#include "C:/Users/Fane/Documents/GitHub/Ludo/Include/GameManager.h"
 #include <random>
 #include <string>
 #include <iostream>
@@ -31,11 +31,11 @@ void GameManager::startGame() {
             continue;
         }
 
-        // Simulăm aruncarea zarului
+        // Simulăm aruncarea zarului cu șanse mai mari pentru 6
         static std::random_device rd;
         static std::mt19937 gen(rd());
-        static std::uniform_int_distribution<> diceRoll(1, 6);
-        int dice = diceRoll(gen);
+        static std::discrete_distribution<> dist({1, 1, 1, 1, 1, 3}); // Probabilități mai mari pentru 6
+        int dice = dist(gen) + 1; // Distribuția returnează valori de la 0 la 5, deci adăugăm 1
 
         std::cout << "You rolled a " << dice << "!" << std::endl;
 
