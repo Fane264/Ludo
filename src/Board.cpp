@@ -1,7 +1,5 @@
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Board.h"
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Piece.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Exceptions.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/GameException.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -66,3 +64,5 @@ bool Board::checkGameOver() const {
     }
     return false;
 }
+
+

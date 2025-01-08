@@ -94,41 +94,37 @@ $(function(){ initResizable(false); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PIECE_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PIECE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;GameEntity.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_piece.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_piece.html">Piece</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_game_entity.html">GameEntity</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">int</span> position; </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> isInBase; </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_piece.html#a7a8296e9f9206426a9d67e50dd50dd76">Piece</a>(<span class="keywordtype">int</span> startPosition = 0);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#ac00784460aec8ce22ae645e98b1bda3f">move</a>(<span class="keywordtype">int</span> steps);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_piece.html#a9f267e79c575d5b20fd49a847edb6b11">canMove</a>(<span class="keywordtype">int</span> steps) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#a5608c68b3809247e8c327519c742b08b">reset</a>();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_piece.html#a5deedc83dd31141563b4fef5e3a3097c">getPosition</a>() <span class="keyword">const</span>; <span class="comment">// Adăugat pentru acces la poziție</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#a5cc39d688a37612f5798439fca259a11">displayInfo</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    std::unique_ptr&lt;GameEntity&gt; <a class="code hl_function" href="class_piece.html#a53ec796e05c52523ad14951b1ecc3785">clone</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_piece.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_piece.html">Piece</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> <span class="keywordtype">int</span> position; </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> <span class="keywordtype">bool</span> isInBase; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> <span class="keyword">explicit</span> <a class="code hl_function" href="class_piece.html#a7a8296e9f9206426a9d67e50dd50dd76">Piece</a>(<span class="keywordtype">int</span> startPosition = 0); <span class="comment">// Adăugat `explicit` pentru a evita conversiile implicite</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#ac00784460aec8ce22ae645e98b1bda3f">move</a>(<span class="keywordtype">int</span> steps);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_piece.html#a9f267e79c575d5b20fd49a847edb6b11">canMove</a>(<span class="keywordtype">int</span> steps) <span class="keyword">const</span>; <span class="comment">// Marcată cu `[[nodiscard]]` pentru a indica utilizarea obligatorie a valorii returnate</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#a5608c68b3809247e8c327519c742b08b">reset</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_piece.html#a5deedc83dd31141563b4fef5e3a3097c">getPosition</a>() <span class="keyword">const</span>; <span class="comment">// Marcată cu `[[nodiscard]]`</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_piece.html#a915b8fcda0c0a63b0cfa8d2a17046775">displayInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_game_entity_html"><div class="ttname"><a href="class_game_entity.html">GameEntity</a></div><div class="ttdoc">Clasa abstractă pentru toate entitățile din joc.</div><div class="ttdef"><b>Definition</b> GameEntity.h:10</div></div>
-<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">Clasa care reprezintă o piesă de joc.</div><div class="ttdef"><b>Definition</b> Piece.h:9</div></div>
-<div class="ttc" id="aclass_piece_html_a53ec796e05c52523ad14951b1ecc3785"><div class="ttname"><a href="class_piece.html#a53ec796e05c52523ad14951b1ecc3785">Piece::clone</a></div><div class="ttdeci">std::unique_ptr&lt; GameEntity &gt; clone() const override</div><div class="ttdoc">Creează o copie a piesei.</div><div class="ttdef"><b>Definition</b> Piece.cpp:36</div></div>
-<div class="ttc" id="aclass_piece_html_a5608c68b3809247e8c327519c742b08b"><div class="ttname"><a href="class_piece.html#a5608c68b3809247e8c327519c742b08b">Piece::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Resetează piesa la poziția inițială (bază).</div><div class="ttdef"><b>Definition</b> Piece.cpp:23</div></div>
-<div class="ttc" id="aclass_piece_html_a5cc39d688a37612f5798439fca259a11"><div class="ttname"><a href="class_piece.html#a5cc39d688a37612f5798439fca259a11">Piece::displayInfo</a></div><div class="ttdeci">void displayInfo() const override</div><div class="ttdoc">Afișează informațiile despre piesă.</div><div class="ttdef"><b>Definition</b> Piece.cpp:32</div></div>
-<div class="ttc" id="aclass_piece_html_a5deedc83dd31141563b4fef5e3a3097c"><div class="ttname"><a href="class_piece.html#a5deedc83dd31141563b4fef5e3a3097c">Piece::getPosition</a></div><div class="ttdeci">int getPosition() const</div><div class="ttdoc">Obține poziția curentă a piesei.</div><div class="ttdef"><b>Definition</b> Piece.cpp:28</div></div>
-<div class="ttc" id="aclass_piece_html_a7a8296e9f9206426a9d67e50dd50dd76"><div class="ttname"><a href="class_piece.html#a7a8296e9f9206426a9d67e50dd50dd76">Piece::Piece</a></div><div class="ttdeci">Piece(int startPosition=0)</div><div class="ttdoc">Constructorul implicit pentru Piece.</div><div class="ttdef"><b>Definition</b> Piece.cpp:5</div></div>
-<div class="ttc" id="aclass_piece_html_a9f267e79c575d5b20fd49a847edb6b11"><div class="ttname"><a href="class_piece.html#a9f267e79c575d5b20fd49a847edb6b11">Piece::canMove</a></div><div class="ttdeci">bool canMove(int steps) const</div><div class="ttdoc">Verifică dacă piesa poate fi mutată un anumit număr de pași.</div><div class="ttdef"><b>Definition</b> Piece.cpp:16</div></div>
-<div class="ttc" id="aclass_piece_html_ac00784460aec8ce22ae645e98b1bda3f"><div class="ttname"><a href="class_piece.html#ac00784460aec8ce22ae645e98b1bda3f">Piece::move</a></div><div class="ttdeci">void move(int steps)</div><div class="ttdoc">Mută piesa un număr de pași pe tablă.</div><div class="ttdef"><b>Definition</b> Piece.cpp:7</div></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// PIECE_H</span></div>
+<div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">Reprezintă o piesă de pe tabla de joc Ludo.</div><div class="ttdef"><b>Definition</b> Piece.h:10</div></div>
+<div class="ttc" id="aclass_piece_html_a5608c68b3809247e8c327519c742b08b"><div class="ttname"><a href="class_piece.html#a5608c68b3809247e8c327519c742b08b">Piece::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Resetează piesa la poziția inițială (bază).</div><div class="ttdef"><b>Definition</b> Piece.cpp:22</div></div>
+<div class="ttc" id="aclass_piece_html_a5deedc83dd31141563b4fef5e3a3097c"><div class="ttname"><a href="class_piece.html#a5deedc83dd31141563b4fef5e3a3097c">Piece::getPosition</a></div><div class="ttdeci">int getPosition() const</div><div class="ttdoc">Obține poziția curentă a piesei.</div><div class="ttdef"><b>Definition</b> Piece.cpp:27</div></div>
+<div class="ttc" id="aclass_piece_html_a7a8296e9f9206426a9d67e50dd50dd76"><div class="ttname"><a href="class_piece.html#a7a8296e9f9206426a9d67e50dd50dd76">Piece::Piece</a></div><div class="ttdeci">Piece(int startPosition=0)</div><div class="ttdoc">Constructor pentru a inițializa piesa.</div><div class="ttdef"><b>Definition</b> Piece.cpp:4</div></div>
+<div class="ttc" id="aclass_piece_html_a915b8fcda0c0a63b0cfa8d2a17046775"><div class="ttname"><a href="class_piece.html#a915b8fcda0c0a63b0cfa8d2a17046775">Piece::displayInfo</a></div><div class="ttdeci">void displayInfo() const</div><div class="ttdoc">Afișează informații despre piesă.</div><div class="ttdef"><b>Definition</b> Piece.cpp:31</div></div>
+<div class="ttc" id="aclass_piece_html_a9f267e79c575d5b20fd49a847edb6b11"><div class="ttname"><a href="class_piece.html#a9f267e79c575d5b20fd49a847edb6b11">Piece::canMove</a></div><div class="ttdeci">bool canMove(int steps) const</div><div class="ttdoc">Verifică dacă piesa poate fi mutată cu un anumit număr de pași.</div><div class="ttdef"><b>Definition</b> Piece.cpp:15</div></div>
+<div class="ttc" id="aclass_piece_html_ac00784460aec8ce22ae645e98b1bda3f"><div class="ttname"><a href="class_piece.html#ac00784460aec8ce22ae645e98b1bda3f">Piece::move</a></div><div class="ttdeci">void move(int steps)</div><div class="ttdoc">Mută piesa pe tablă.</div><div class="ttdef"><b>Definition</b> Piece.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

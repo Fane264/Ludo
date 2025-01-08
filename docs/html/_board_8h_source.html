@@ -100,18 +100,27 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_board.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_board.html">Board</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> numPlayers;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::vector&lt;std::vector&lt;Piece&gt;&gt; playerPieces;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> <span class="keywordtype">int</span> numPlayers; </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> std::vector&lt;std::vector&lt;Piece&gt;&gt; playerPieces; </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_board.html">Board</a>(<span class="keywordtype">int</span> players);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> displayBoard() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> movePiece(<span class="keywordtype">int</span> playerId, <span class="keywordtype">int</span> pieceId, <span class="keywordtype">int</span> steps);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> <a class="code hl_function" href="class_board.html#aca49810be20d4bcef52ef6f54609205c">Board</a>(<span class="keywordtype">int</span> players, <span class="keywordtype">int</span> piecesPerPlayer);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_board.html#ae43c191b41205e4b7f250bff687eb2b0">displayBoard</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_board.html#ac334ef3f1d578957907898ada346c559">movePiece</a>(<span class="keywordtype">int</span> playerId, <span class="keywordtype">int</span> pieceId, <span class="keywordtype">int</span> steps);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_board.html#ac8d41fabe6a0c5dfbd45320c5a17fd0b">checkGameOver</a>() <span class="keyword">const</span>; <span class="comment">// Marcată cu [[nodiscard]]</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdoc">Clasa pentru gestionarea tablei de joc.</div><div class="ttdef"><b>Definition</b> Board.h:10</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// BOARD_H</span></div>
+<div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdoc">Clasa care reprezintă tabla de joc pentru Ludo.</div><div class="ttdef"><b>Definition</b> Board.h:10</div></div>
+<div class="ttc" id="aclass_board_html_ac334ef3f1d578957907898ada346c559"><div class="ttname"><a href="class_board.html#ac334ef3f1d578957907898ada346c559">Board::movePiece</a></div><div class="ttdeci">bool movePiece(int playerId, int pieceId, int steps)</div><div class="ttdoc">Mută o piesă a jucătorului.</div><div class="ttdef"><b>Definition</b> Board.cpp:20</div></div>
+<div class="ttc" id="aclass_board_html_ac8d41fabe6a0c5dfbd45320c5a17fd0b"><div class="ttname"><a href="class_board.html#ac8d41fabe6a0c5dfbd45320c5a17fd0b">Board::checkGameOver</a></div><div class="ttdeci">bool checkGameOver() const</div><div class="ttdoc">Verifică dacă jocul s-a terminat.</div><div class="ttdef"><b>Definition</b> Board.cpp:51</div></div>
+<div class="ttc" id="aclass_board_html_aca49810be20d4bcef52ef6f54609205c"><div class="ttname"><a href="class_board.html#aca49810be20d4bcef52ef6f54609205c">Board::Board</a></div><div class="ttdeci">Board(int players, int piecesPerPlayer)</div><div class="ttdoc">Constructor pentru clasa Board.</div><div class="ttdef"><b>Definition</b> Board.cpp:6</div></div>
+<div class="ttc" id="aclass_board_html_ae43c191b41205e4b7f250bff687eb2b0"><div class="ttname"><a href="class_board.html#ae43c191b41205e4b7f250bff687eb2b0">Board::displayBoard</a></div><div class="ttdeci">void displayBoard() const</div><div class="ttdoc">Afișează starea curentă a tablei.</div><div class="ttdef"><b>Definition</b> Board.cpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

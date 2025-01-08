@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['piece_0',['Piece',['../class_piece.html#a7a8296e9f9206426a9d67e50dd50dd76',1,'Piece']]]
+  ['incrementscore_0',['incrementScore',['../class_player.html#a2d8e08804b8480b1f9ac780b21ac4f49',1,'Player']]]
 ];

@@ -96,25 +96,38 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;GameEntity.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_player.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_game_entity.html">GameEntity</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::string name;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> score;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_player.html">Player</a>(<span class="keyword">const</span> std::string&amp; playerName, <span class="keywordtype">int</span> playerScore);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a12b38c5e390b0b4d23d23a35297f2b11">displayInfo</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::unique_ptr&lt;GameEntity&gt; <a class="code hl_function" href="class_player.html#a0ad44661a3fc719fc28003c7b659a8b5">clone</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_player.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_game_entity.html">GameEntity</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::string name; </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">int</span> score;        </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_player.html#a28c571693e9883e373e41ff91f8c4272">Player</a>(std::string playerName, <span class="keywordtype">int</span> playerScore);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a2d8e08804b8480b1f9ac780b21ac4f49">incrementScore</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    [[nodiscard]] std::string <a class="code hl_function" href="class_player.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#acbdb2bae8d732157af0ca5f5438a2b63">getScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a12b38c5e390b0b4d23d23a35297f2b11">displayInfo</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    [[nodiscard]] std::unique_ptr&lt;GameEntity&gt; <a class="code hl_function" href="class_player.html#a0ad44661a3fc719fc28003c7b659a8b5">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">// PLAYER_H</span></div>
 <div class="ttc" id="aclass_game_entity_html"><div class="ttname"><a href="class_game_entity.html">GameEntity</a></div><div class="ttdoc">Clasa abstractă pentru toate entitățile din joc.</div><div class="ttdef"><b>Definition</b> GameEntity.h:10</div></div>
-<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Clasa pentru un jucător în joc.</div><div class="ttdef"><b>Definition</b> Player.h:10</div></div>
-<div class="ttc" id="aclass_player_html_a0ad44661a3fc719fc28003c7b659a8b5"><div class="ttname"><a href="class_player.html#a0ad44661a3fc719fc28003c7b659a8b5">Player::clone</a></div><div class="ttdeci">std::unique_ptr&lt; GameEntity &gt; clone() const override</div><div class="ttdoc">Creează o copie a obiectului.</div><div class="ttdef"><b>Definition</b> Player.cpp:9</div></div>
-<div class="ttc" id="aclass_player_html_a12b38c5e390b0b4d23d23a35297f2b11"><div class="ttname"><a href="class_player.html#a12b38c5e390b0b4d23d23a35297f2b11">Player::displayInfo</a></div><div class="ttdeci">void displayInfo() const override</div><div class="ttdoc">Afișează informațiile despre entitate.</div><div class="ttdef"><b>Definition</b> Player.cpp:5</div></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Clasa pentru un jucător din joc.</div><div class="ttdef"><b>Definition</b> Player.h:12</div></div>
+<div class="ttc" id="aclass_player_html_a0ad44661a3fc719fc28003c7b659a8b5"><div class="ttname"><a href="class_player.html#a0ad44661a3fc719fc28003c7b659a8b5">Player::clone</a></div><div class="ttdeci">std::unique_ptr&lt; GameEntity &gt; clone() const override</div><div class="ttdoc">Creează o copie a jucătorului.</div><div class="ttdef"><b>Definition</b> Player.cpp:23</div></div>
+<div class="ttc" id="aclass_player_html_a12b38c5e390b0b4d23d23a35297f2b11"><div class="ttname"><a href="class_player.html#a12b38c5e390b0b4d23d23a35297f2b11">Player::displayInfo</a></div><div class="ttdeci">void displayInfo() const override</div><div class="ttdoc">Afișează informațiile despre jucător.</div><div class="ttdef"><b>Definition</b> Player.cpp:19</div></div>
+<div class="ttc" id="aclass_player_html_a28c571693e9883e373e41ff91f8c4272"><div class="ttname"><a href="class_player.html#a28c571693e9883e373e41ff91f8c4272">Player::Player</a></div><div class="ttdeci">Player(std::string playerName, int playerScore)</div><div class="ttdoc">Constructor pentru a inițializa un jucător.</div><div class="ttdef"><b>Definition</b> Player.cpp:4</div></div>
+<div class="ttc" id="aclass_player_html_a2d8e08804b8480b1f9ac780b21ac4f49"><div class="ttname"><a href="class_player.html#a2d8e08804b8480b1f9ac780b21ac4f49">Player::incrementScore</a></div><div class="ttdeci">void incrementScore()</div><div class="ttdoc">Crește scorul jucătorului.</div><div class="ttdef"><b>Definition</b> Player.cpp:7</div></div>
+<div class="ttc" id="aclass_player_html_a73e4ff2d70e62ca7e3be1d9b4ad9de85"><div class="ttname"><a href="class_player.html#a73e4ff2d70e62ca7e3be1d9b4ad9de85">Player::getName</a></div><div class="ttdeci">std::string getName() const</div><div class="ttdoc">Obține numele jucătorului.</div><div class="ttdef"><b>Definition</b> Player.cpp:11</div></div>
+<div class="ttc" id="aclass_player_html_acbdb2bae8d732157af0ca5f5438a2b63"><div class="ttname"><a href="class_player.html#acbdb2bae8d732157af0ca5f5438a2b63">Player::getScore</a></div><div class="ttdeci">int getScore() const</div><div class="ttdoc">Obține scorul jucătorului.</div><div class="ttdef"><b>Definition</b> Player.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

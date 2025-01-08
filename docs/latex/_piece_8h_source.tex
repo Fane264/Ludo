@@ -5,29 +5,27 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PIECE\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PIECE\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameEntity.h"{}}}
+\DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_piece}{Piece}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_entity}{GameEntity}}\ \{}
-\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ position;\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInBase;\ }
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}{Piece}}(\textcolor{keywordtype}{int}\ startPosition\ =\ 0);}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_ac00784460aec8ce22ae645e98b1bda3f}{move}}(\textcolor{keywordtype}{int}\ steps);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_piece_a9f267e79c575d5b20fd49a847edb6b11}{canMove}}(\textcolor{keywordtype}{int}\ steps)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a5608c68b3809247e8c327519c742b08b}{reset}}();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_a5deedc83dd31141563b4fef5e3a3097c}{getPosition}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Adăugat\ pentru\ acces\ la\ poziție}}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a5cc39d688a37612f5798439fca259a11}{displayInfo}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00054\ \ \ \ \ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_piece_a53ec796e05c52523ad14951b1ecc3785}{clone}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00055\ \};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_piece}{Piece}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \textcolor{keywordtype}{int}\ position;\ }
+\DoxyCodeLine{00013\ \ \textcolor{keywordtype}{bool}\ isInBase;\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_piece_a7a8296e9f9206426a9d67e50dd50dd76}{Piece}}(\textcolor{keywordtype}{int}\ startPosition\ =\ 0);\ \textcolor{comment}{//\ Adăugat\ \`{}explicit`\ pentru\ a\ evita\ conversiile\ implicite}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_ac00784460aec8ce22ae645e98b1bda3f}{move}}(\textcolor{keywordtype}{int}\ steps);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_piece_a9f267e79c575d5b20fd49a847edb6b11}{canMove}}(\textcolor{keywordtype}{int}\ steps)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Marcată\ cu\ \`{}[[nodiscard]]`\ pentru\ a\ indica\ utilizarea\ obligatorie\ a\ valorii\ returnate}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a5608c68b3809247e8c327519c742b08b}{reset}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_piece_a5deedc83dd31141563b4fef5e3a3097c}{getPosition}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Marcată\ cu\ \`{}[[nodiscard]]`}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_piece_a915b8fcda0c0a63b0cfa8d2a17046775}{displayInfo}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PIECE\_H}}
 
 \end{DoxyCode}

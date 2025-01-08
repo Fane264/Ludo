@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reset_0',['reset',['../class_piece.html#a5608c68b3809247e8c327519c742b08b',1,'Piece']]]
+  ['move_0',['move',['../class_piece.html#ac00784460aec8ce22ae645e98b1bda3f',1,'Piece']]],
+  ['movepiece_1',['movePiece',['../class_board.html#ac334ef3f1d578957907898ada346c559',1,'Board']]]
 ];

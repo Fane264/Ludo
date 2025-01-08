@@ -10,15 +10,20 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board}{Board}}\ \{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ numPlayers;}
-\DoxyCodeLine{00013\ \ \ \ \ std::vector<std::vector<Piece>>\ playerPieces;}
+\DoxyCodeLine{00012\ \ \textcolor{keywordtype}{int}\ numPlayers;\ }
+\DoxyCodeLine{00013\ \ std::vector<std::vector<Piece>>\ playerPieces;\ }
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_board}{Board}}(\textcolor{keywordtype}{int}\ players);}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ displayBoard()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ movePiece(\textcolor{keywordtype}{int}\ playerId,\ \textcolor{keywordtype}{int}\ pieceId,\ \textcolor{keywordtype}{int}\ steps);}
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \mbox{\hyperlink{class_board_aca49810be20d4bcef52ef6f54609205c}{Board}}(\textcolor{keywordtype}{int}\ players,\ \textcolor{keywordtype}{int}\ piecesPerPlayer);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_ae43c191b41205e4b7f250bff687eb2b0}{displayBoard}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_ac334ef3f1d578957907898ada346c559}{movePiece}}(\textcolor{keywordtype}{int}\ playerId,\ \textcolor{keywordtype}{int}\ pieceId,\ \textcolor{keywordtype}{int}\ steps);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_ac8d41fabe6a0c5dfbd45320c5a17fd0b}{checkGameOver}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Marcată\ cu\ [[nodiscard]]}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARD\_H}}
 
 \end{DoxyCode}

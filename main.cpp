@@ -1,8 +1,5 @@
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Player.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Piece.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/SpecialPiece.h"
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Board.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Exceptions.h"
 #include <iostream>
 #include <random>
 #include <string>
@@ -15,7 +12,7 @@
 int rollDice() {
     static std::random_device rd;
     static std::mt19937 gen(rd());
-    static std::discrete_distribution<> dist({1, 1, 1, 1, 1, 5}); // Șanse mai mari pentru 6
+    static std::discrete_distribution<> dist({1, 1, 1, 1, 1, 3}); // Șanse mai mari pentru 6
     return dist(gen) + 1;
 }
 
@@ -63,7 +60,7 @@ int main() {
 
             // Dacă zarul NU este 6, trece la următorul jucător
             if (diceRoll != 6) {
-                currentPlayer = (currentPlayer + 1) % numPlayers;
+                currentPlayer =(currentPlayer + 1) % numPlayers;
             }
         }
 

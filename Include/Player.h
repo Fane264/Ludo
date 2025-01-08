@@ -3,24 +3,52 @@
 
 #include "GameEntity.h"
 #include <string>
+#include <memory>
 
 /**
+ * @class Player
  * @brief Clasa pentru un jucător din joc.
  */
 class Player : public GameEntity {
 private:
-    std::string name; // Numele jucătorului
-    int score;        // Scorul jucătorului
+    std::string name; ///< Numele jucătorului
+    int score;        ///< Scorul jucătorului
 
 public:
-    Player(const std::string& playerName, int playerScore);
+    /**
+     * @brief Constructor pentru a inițializa un jucător.
+     * @param playerName Numele jucătorului.
+     * @param playerScore Scorul inițial al jucătorului.
+     */
+    Player(std::string playerName, int playerScore);
 
-    void incrementScore();           // Crește scorul jucătorului
-    std::string getName() const;     // Obține numele
-    int getScore() const;            // Obține scorul
+    /**
+     * @brief Crește scorul jucătorului.
+     */
+    void incrementScore();
 
-    void displayInfo() const override; // Afișează informațiile despre jucător
-    std::unique_ptr<GameEntity> clone() const override; // Creează o copie
+    /**
+     * @brief Obține numele jucătorului.
+     * @return Numele jucătorului.
+     */
+    [[nodiscard]] std::string getName() const;
+
+    /**
+     * @brief Obține scorul jucătorului.
+     * @return Scorul jucătorului.
+     */
+    [[nodiscard]] int getScore() const;
+
+    /**
+     * @brief Afișează informațiile despre jucător.
+     */
+    void displayInfo() const override;
+
+    /**
+     * @brief Creează o copie a jucătorului.
+     * @return Un pointer unic către o copie a jucătorului.
+     */
+    [[nodiscard]] std::unique_ptr<GameEntity> clone() const override;
 };
 
 #endif // PLAYER_H

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['displayinfo_0',['displayInfo',['../class_game_entity.html#ae83f4e77fbceb81406b513ec917a0993',1,'GameEntity::displayInfo()'],['../class_piece.html#a5cc39d688a37612f5798439fca259a11',1,'Piece::displayInfo()'],['../class_player.html#a12b38c5e390b0b4d23d23a35297f2b11',1,'Player::displayInfo()'],['../class_special_piece.html#a4d2bfce207c0668757ac28346293cdad',1,'SpecialPiece::displayInfo()']]]
+  ['canmove_0',['canMove',['../class_piece.html#a9f267e79c575d5b20fd49a847edb6b11',1,'Piece']]],
+  ['checkgameover_1',['checkGameOver',['../class_board.html#ac8d41fabe6a0c5dfbd45320c5a17fd0b',1,'Board']]],
+  ['clone_2',['clone',['../class_game_entity.html#a541cfc0e307116e7fe98912d5b8edb4e',1,'GameEntity::clone()'],['../class_player.html#a0ad44661a3fc719fc28003c7b659a8b5',1,'Player::clone()']]]
 ];

@@ -2,7 +2,7 @@
 \hypertarget{class_board}{}\label{class_board}\index{Board@{Board}}
 
 
-Clasa pentru gestionarea tablei de joc.  
+Clasa care reprezintă tabla de joc pentru Ludo.  
 
 
 
@@ -12,19 +12,82 @@ Clasa pentru gestionarea tablei de joc.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_board_a908b02fcd8eb1c0c9340a4afdc2dc028}\label{class_board_a908b02fcd8eb1c0c9340a4afdc2dc028} 
-{\bfseries Board} (int players)
-\item 
+\mbox{\hyperlink{class_board_aca49810be20d4bcef52ef6f54609205c}{Board}} (int players, int pieces\+Per\+Player)
+\begin{DoxyCompactList}\small\item\em Constructor pentru clasa \doxylink{class_board}{Board}. \end{DoxyCompactList}\item 
 \Hypertarget{class_board_ae43c191b41205e4b7f250bff687eb2b0}\label{class_board_ae43c191b41205e4b7f250bff687eb2b0} 
 void {\bfseries display\+Board} () const
-\item 
-\Hypertarget{class_board_ac334ef3f1d578957907898ada346c559}\label{class_board_ac334ef3f1d578957907898ada346c559} 
-bool {\bfseries move\+Piece} (int player\+Id, int piece\+Id, int steps)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Afișează starea curentă a tablei. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_ac334ef3f1d578957907898ada346c559}{move\+Piece}} (int player\+Id, int piece\+Id, int steps)
+\begin{DoxyCompactList}\small\item\em Mută o piesă a jucătorului. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_ac8d41fabe6a0c5dfbd45320c5a17fd0b}{check\+Game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Verifică dacă jocul s-\/a terminat. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Clasa pentru gestionarea tablei de joc. 
+Clasa care reprezintă tabla de joc pentru Ludo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_board_aca49810be20d4bcef52ef6f54609205c}\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily \label{class_board_aca49810be20d4bcef52ef6f54609205c} 
+Board\+::\+Board (\begin{DoxyParamCaption}\item[{int}]{players}{, }\item[{int}]{pieces\+Per\+Player}{}\end{DoxyParamCaption})}
+
+
+
+Constructor pentru clasa \doxylink{class_board}{Board}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em players} & Numărul de jucători. \\
+\hline
+{\em pieces\+Per\+Player} & Numărul de piese per jucător. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_board_ac8d41fabe6a0c5dfbd45320c5a17fd0b}\index{Board@{Board}!checkGameOver@{checkGameOver}}
+\index{checkGameOver@{checkGameOver}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{checkGameOver()}{checkGameOver()}}
+{\footnotesize\ttfamily \label{class_board_ac8d41fabe6a0c5dfbd45320c5a17fd0b} 
+bool Board\+::check\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Verifică dacă jocul s-\/a terminat. 
+
+\begin{DoxyReturn}{Returns}
+true dacă un jucător a câștigat, false altfel. 
+\end{DoxyReturn}
+\Hypertarget{class_board_ac334ef3f1d578957907898ada346c559}\index{Board@{Board}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily \label{class_board_ac334ef3f1d578957907898ada346c559} 
+bool Board\+::move\+Piece (\begin{DoxyParamCaption}\item[{int}]{player\+Id}{, }\item[{int}]{piece\+Id}{, }\item[{int}]{steps}{}\end{DoxyParamCaption})}
+
+
+
+Mută o piesă a jucătorului. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Id} & ID-\/ul jucătorului. \\
+\hline
+{\em piece\+Id} & ID-\/ul piesei de mutat. \\
+\hline
+{\em steps} & Numărul de pași de mutat. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true dacă mutarea a avut loc, false altfel. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_move_exception}{Invalid\+Move\+Exception}} & dacă mutarea nu este validă. \\
+\hline
+\end{DoxyExceptions}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

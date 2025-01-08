@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['specialpiece_0',['SpecialPiece',['../class_special_piece.html',1,'']]]
+  ['titlu_20proiect_0',['Titlu proiect',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

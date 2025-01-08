@@ -1,5 +1,4 @@
 #include "C:\Users\Fane\Documents\GitHub\Ludo\Include/Piece.h"
-#include "C:\Users\Fane\Documents\GitHub\Ludo\Include/GameException.h"
 #include <iostream>
 
 Piece::Piece(int startPosition) : position(startPosition), isInBase(true) {}

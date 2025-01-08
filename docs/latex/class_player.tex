@@ -2,7 +2,7 @@
 \hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
 
 
-Clasa pentru un jucător în joc.  
+Clasa pentru un jucător din joc.  
 
 
 
@@ -18,32 +18,58 @@ Inheritance diagram for Player\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_player_a2721a8e89d8c3ccaf2600d9815b66bec}\label{class_player_a2721a8e89d8c3ccaf2600d9815b66bec} 
-{\bfseries Player} (const std\+::string \&player\+Name, int player\+Score)
-\item 
+\mbox{\hyperlink{class_player_a28c571693e9883e373e41ff91f8c4272}{Player}} (std\+::string player\+Name, int player\+Score)
+\begin{DoxyCompactList}\small\item\em Constructor pentru a inițializa un jucător. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_a2d8e08804b8480b1f9ac780b21ac4f49}\label{class_player_a2d8e08804b8480b1f9ac780b21ac4f49} 
+void {\bfseries increment\+Score} ()
+\begin{DoxyCompactList}\small\item\em Crește scorul jucătorului. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obține numele jucătorului. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_acbdb2bae8d732157af0ca5f5438a2b63}{get\+Score}} () const
+\begin{DoxyCompactList}\small\item\em Obține scorul jucătorului. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_a12b38c5e390b0b4d23d23a35297f2b11}{display\+Info}} () const override
-\begin{DoxyCompactList}\small\item\em Afișează informațiile despre entitate. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Afișează informațiile despre jucător. \end{DoxyCompactList}\item 
 std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ \mbox{\hyperlink{class_player_a0ad44661a3fc719fc28003c7b659a8b5}{clone}} () const override
-\begin{DoxyCompactList}\small\item\em Creează o copie a obiectului. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creează o copie a jucătorului. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_entity}{Game\+Entity}}}
 
 
 \doxysubsection{Detailed Description}
-Clasa pentru un jucător în joc. 
+Clasa pentru un jucător din joc. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_a28c571693e9883e373e41ff91f8c4272}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily \label{class_player_a28c571693e9883e373e41ff91f8c4272} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{player\+Name}{, }\item[{int}]{player\+Score}{}\end{DoxyParamCaption})}
+
+
+
+Constructor pentru a inițializa un jucător. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Name} & Numele jucătorului. \\
+\hline
+{\em player\+Score} & Scorul inițial al jucătorului. \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_player_a0ad44661a3fc719fc28003c7b659a8b5}\index{Player@{Player}!clone@{clone}}
 \index{clone@{clone}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{clone()}{clone()}}
 {\footnotesize\ttfamily \label{class_player_a0ad44661a3fc719fc28003c7b659a8b5} 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ Player\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_entity}{Game\+Entity}} $>$ Player\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Creează o copie a obiectului. 
+Creează o copie a jucătorului. 
 
 \begin{DoxyReturn}{Returns}
-Un pointer inteligent la o copie a obiectului. 
+Un pointer unic către o copie a jucătorului. 
 \end{DoxyReturn}
 
 
@@ -57,12 +83,38 @@ void Player\+::display\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}
 
 
 
-Afișează informațiile despre entitate. 
+Afișează informațiile despre jucător. 
 
 
 
 Implements \mbox{\hyperlink{class_game_entity_ae83f4e77fbceb81406b513ec917a0993}{Game\+Entity}}.
 
+\Hypertarget{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85} 
+std\+::string Player\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Obține numele jucătorului. 
+
+\begin{DoxyReturn}{Returns}
+Numele jucătorului. 
+\end{DoxyReturn}
+\Hypertarget{class_player_acbdb2bae8d732157af0ca5f5438a2b63}\index{Player@{Player}!getScore@{getScore}}
+\index{getScore@{getScore}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily \label{class_player_acbdb2bae8d732157af0ca5f5438a2b63} 
+int Player\+::get\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Obține scorul jucătorului. 
+
+\begin{DoxyReturn}{Returns}
+Scorul jucătorului. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -6,17 +6,18 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAMEENTITY\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ }
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_entity}{GameEntity}}\ \{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00012\ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_entity}{\string~GameEntity}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00017\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_entity_ae83f4e77fbceb81406b513ec917a0993}{displayInfo}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00023\ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_game_entity_a541cfc0e307116e7fe98912d5b8edb4e}{clone}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00024\ \};}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \ \mbox{\hyperlink{class_game_entity}{GameEntity}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00013\ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_game_entity}{\string~GameEntity}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_entity_ae83f4e77fbceb81406b513ec917a0993}{displayInfo}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \ [[nodiscard]]\ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<GameEntity>\ \mbox{\hyperlink{class_game_entity_a541cfc0e307116e7fe98912d5b8edb4e}{clone}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GAMEENTITY\_H}}
 
 \end{DoxyCode}

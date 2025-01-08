@@ -91,31 +91,21 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Clasa care reprezintă o piesă de joc.  
+<p>Reprezintă o piesă de pe tabla de joc Ludo.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_piece_8h_source.html">Piece.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Piece:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_piece.png" usemap="#Piece_map" alt=""/>
-  <map id="Piece_map" name="Piece_map">
-<area href="class_game_entity.html" title="Clasa abstractă pentru toate entitățile din joc." alt="GameEntity" shape="rect" coords="0,0,86,24"/>
-<area href="class_special_piece.html" title="Clasa pentru o piesă specială cu abilități suplimentare." alt="SpecialPiece" shape="rect" coords="0,112,86,136"/>
-  </map>
-</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a8296e9f9206426a9d67e50dd50dd76" id="r_a7a8296e9f9206426a9d67e50dd50dd76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a8296e9f9206426a9d67e50dd50dd76">Piece</a> (int startPosition=0)</td></tr>
-<tr class="memdesc:a7a8296e9f9206426a9d67e50dd50dd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructorul implicit pentru <a class="el" href="class_piece.html" title="Clasa care reprezintă o piesă de joc.">Piece</a>.  <br /></td></tr>
+<tr class="memdesc:a7a8296e9f9206426a9d67e50dd50dd76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor pentru a inițializa piesa.  <br /></td></tr>
 <tr class="separator:a7a8296e9f9206426a9d67e50dd50dd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac00784460aec8ce22ae645e98b1bda3f" id="r_ac00784460aec8ce22ae645e98b1bda3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac00784460aec8ce22ae645e98b1bda3f">move</a> (int steps)</td></tr>
-<tr class="memdesc:ac00784460aec8ce22ae645e98b1bda3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mută piesa un număr de pași pe tablă.  <br /></td></tr>
+<tr class="memdesc:ac00784460aec8ce22ae645e98b1bda3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mută piesa pe tablă.  <br /></td></tr>
 <tr class="separator:ac00784460aec8ce22ae645e98b1bda3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f267e79c575d5b20fd49a847edb6b11" id="r_a9f267e79c575d5b20fd49a847edb6b11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f267e79c575d5b20fd49a847edb6b11">canMove</a> (int steps) const</td></tr>
-<tr class="memdesc:a9f267e79c575d5b20fd49a847edb6b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifică dacă piesa poate fi mutată un anumit număr de pași.  <br /></td></tr>
+<tr class="memdesc:a9f267e79c575d5b20fd49a847edb6b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifică dacă piesa poate fi mutată cu un anumit număr de pași.  <br /></td></tr>
 <tr class="separator:a9f267e79c575d5b20fd49a847edb6b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5608c68b3809247e8c327519c742b08b" id="r_a5608c68b3809247e8c327519c742b08b"><td class="memItemLeft" align="right" valign="top"><a id="a5608c68b3809247e8c327519c742b08b" name="a5608c68b3809247e8c327519c742b08b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
@@ -124,22 +114,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
 <tr class="memitem:a5deedc83dd31141563b4fef5e3a3097c" id="r_a5deedc83dd31141563b4fef5e3a3097c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5deedc83dd31141563b4fef5e3a3097c">getPosition</a> () const</td></tr>
 <tr class="memdesc:a5deedc83dd31141563b4fef5e3a3097c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obține poziția curentă a piesei.  <br /></td></tr>
 <tr class="separator:a5deedc83dd31141563b4fef5e3a3097c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc39d688a37612f5798439fca259a11" id="r_a5cc39d688a37612f5798439fca259a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc39d688a37612f5798439fca259a11">displayInfo</a> () const override</td></tr>
-<tr class="memdesc:a5cc39d688a37612f5798439fca259a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afișează informațiile despre piesă.  <br /></td></tr>
-<tr class="separator:a5cc39d688a37612f5798439fca259a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53ec796e05c52523ad14951b1ecc3785" id="r_a53ec796e05c52523ad14951b1ecc3785"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_game_entity.html">GameEntity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53ec796e05c52523ad14951b1ecc3785">clone</a> () const override</td></tr>
-<tr class="memdesc:a53ec796e05c52523ad14951b1ecc3785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creează o copie a piesei.  <br /></td></tr>
-<tr class="separator:a53ec796e05c52523ad14951b1ecc3785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_game_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game_entity.html">GameEntity</a></td></tr>
+<tr class="memitem:a915b8fcda0c0a63b0cfa8d2a17046775" id="r_a915b8fcda0c0a63b0cfa8d2a17046775"><td class="memItemLeft" align="right" valign="top"><a id="a915b8fcda0c0a63b0cfa8d2a17046775" name="a915b8fcda0c0a63b0cfa8d2a17046775"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayInfo</b> () const</td></tr>
+<tr class="memdesc:a915b8fcda0c0a63b0cfa8d2a17046775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afișează informații despre piesă. <br /></td></tr>
+<tr class="separator:a915b8fcda0c0a63b0cfa8d2a17046775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Clasa care reprezintă o piesă de joc. </p>
+<div class="textblock"><p>Reprezintă o piesă de pe tabla de joc Ludo. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7a8296e9f9206426a9d67e50dd50dd76" name="a7a8296e9f9206426a9d67e50dd50dd76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a8296e9f9206426a9d67e50dd50dd76">&#9670;&#160;</a></span>Piece()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Piece::Piece </td>
@@ -148,12 +138,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructorul implicit pentru <a class="el" href="class_piece.html" title="Clasa care reprezintă o piesă de joc.">Piece</a>. </p>
+<p>Constructor pentru a inițializa piesa. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">startPosition</td><td>Poziția inițială a piesei (default: 0). </td></tr>
+    <tr><td class="paramname">startPosition</td><td>Poziția de start a piesei (default 0). </td></tr>
   </table>
   </dd>
 </dl>
@@ -166,6 +161,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Piece::canMove </td>
@@ -174,79 +172,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Verifică dacă piesa poate fi mutată un anumit număr de pași. </p>
+<p>Verifică dacă piesa poate fi mutată cu un anumit număr de pași. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">steps</td><td>Numărul de pași verificați. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true dacă mutarea este permisă, altfel false. </dd></dl>
-
-</div>
-</div>
-<a id="a53ec796e05c52523ad14951b1ecc3785" name="a53ec796e05c52523ad14951b1ecc3785"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53ec796e05c52523ad14951b1ecc3785">&#9670;&#160;</a></span>clone()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="class_game_entity.html">GameEntity</a> &gt; Piece::clone </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Creează o copie a piesei. </p>
-<dl class="section return"><dt>Returns</dt><dd>Un pointer inteligent la o copie a obiectului curent. </dd></dl>
-
-<p>Implements <a class="el" href="class_game_entity.html#a541cfc0e307116e7fe98912d5b8edb4e">GameEntity</a>.</p>
-
-<p>Reimplemented in <a class="el" href="class_special_piece.html#ab3708e0f572d54f509e6c7196658c061">SpecialPiece</a>.</p>
-
-</div>
-</div>
-<a id="a5cc39d688a37612f5798439fca259a11" name="a5cc39d688a37612f5798439fca259a11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cc39d688a37612f5798439fca259a11">&#9670;&#160;</a></span>displayInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Piece::displayInfo </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Afișează informațiile despre piesă. </p>
-
-<p>Implements <a class="el" href="class_game_entity.html#ae83f4e77fbceb81406b513ec917a0993">GameEntity</a>.</p>
-
-<p>Reimplemented in <a class="el" href="class_special_piece.html#a4d2bfce207c0668757ac28346293cdad">SpecialPiece</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>True dacă mutarea este permisă, altfel False. </dd></dl>
 
 </div>
 </div>
@@ -255,6 +195,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Piece::getPosition </td>
@@ -263,6 +206,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Obține poziția curentă a piesei. </p>
@@ -285,10 +233,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr
       </table>
 </div><div class="memdoc">
 
-<p>Mută piesa un număr de pași pe tablă. </p>
+<p>Mută piesa pe tablă. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">steps</td><td>Numărul de pași de mutat. </td></tr>
+    <tr><td class="paramname">steps</td><td>Numărul de pași de mutare. </td></tr>
   </table>
   </dd>
 </dl>

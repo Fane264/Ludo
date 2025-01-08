@@ -91,7 +91,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Clasa pentru un jucător în joc.  
+<p>Clasa pentru un jucător din joc.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_player_8h_source.html">Player.h</a>&gt;</code></p>
@@ -107,20 +107,61 @@ Inheritance diagram for Player:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2721a8e89d8c3ccaf2600d9815b66bec" id="r_a2721a8e89d8c3ccaf2600d9815b66bec"><td class="memItemLeft" align="right" valign="top"><a id="a2721a8e89d8c3ccaf2600d9815b66bec" name="a2721a8e89d8c3ccaf2600d9815b66bec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Player</b> (const std::string &amp;playerName, int playerScore)</td></tr>
-<tr class="separator:a2721a8e89d8c3ccaf2600d9815b66bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c571693e9883e373e41ff91f8c4272" id="r_a28c571693e9883e373e41ff91f8c4272"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c571693e9883e373e41ff91f8c4272">Player</a> (std::string playerName, int playerScore)</td></tr>
+<tr class="memdesc:a28c571693e9883e373e41ff91f8c4272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor pentru a inițializa un jucător.  <br /></td></tr>
+<tr class="separator:a28c571693e9883e373e41ff91f8c4272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8e08804b8480b1f9ac780b21ac4f49" id="r_a2d8e08804b8480b1f9ac780b21ac4f49"><td class="memItemLeft" align="right" valign="top"><a id="a2d8e08804b8480b1f9ac780b21ac4f49" name="a2d8e08804b8480b1f9ac780b21ac4f49"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>incrementScore</b> ()</td></tr>
+<tr class="memdesc:a2d8e08804b8480b1f9ac780b21ac4f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crește scorul jucătorului. <br /></td></tr>
+<tr class="separator:a2d8e08804b8480b1f9ac780b21ac4f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e4ff2d70e62ca7e3be1d9b4ad9de85" id="r_a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e4ff2d70e62ca7e3be1d9b4ad9de85">getName</a> () const</td></tr>
+<tr class="memdesc:a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obține numele jucătorului.  <br /></td></tr>
+<tr class="separator:a73e4ff2d70e62ca7e3be1d9b4ad9de85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbdb2bae8d732157af0ca5f5438a2b63" id="r_acbdb2bae8d732157af0ca5f5438a2b63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbdb2bae8d732157af0ca5f5438a2b63">getScore</a> () const</td></tr>
+<tr class="memdesc:acbdb2bae8d732157af0ca5f5438a2b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obține scorul jucătorului.  <br /></td></tr>
+<tr class="separator:acbdb2bae8d732157af0ca5f5438a2b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12b38c5e390b0b4d23d23a35297f2b11" id="r_a12b38c5e390b0b4d23d23a35297f2b11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12b38c5e390b0b4d23d23a35297f2b11">displayInfo</a> () const override</td></tr>
-<tr class="memdesc:a12b38c5e390b0b4d23d23a35297f2b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afișează informațiile despre entitate.  <br /></td></tr>
+<tr class="memdesc:a12b38c5e390b0b4d23d23a35297f2b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afișează informațiile despre jucător.  <br /></td></tr>
 <tr class="separator:a12b38c5e390b0b4d23d23a35297f2b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad44661a3fc719fc28003c7b659a8b5" id="r_a0ad44661a3fc719fc28003c7b659a8b5"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_game_entity.html">GameEntity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ad44661a3fc719fc28003c7b659a8b5">clone</a> () const override</td></tr>
-<tr class="memdesc:a0ad44661a3fc719fc28003c7b659a8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creează o copie a obiectului.  <br /></td></tr>
+<tr class="memdesc:a0ad44661a3fc719fc28003c7b659a8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creează o copie a jucătorului.  <br /></td></tr>
 <tr class="separator:a0ad44661a3fc719fc28003c7b659a8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_game_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game_entity.html">GameEntity</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Clasa pentru un jucător în joc. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Clasa pentru un jucător din joc. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a28c571693e9883e373e41ff91f8c4272" name="a28c571693e9883e373e41ff91f8c4272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c571693e9883e373e41ff91f8c4272">&#9670;&#160;</a></span>Player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Player::Player </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>playerName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>playerScore</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor pentru a inițializa un jucător. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerName</td><td>Numele jucătorului. </td></tr>
+    <tr><td class="paramname">playerScore</td><td>Scorul inițial al jucătorului. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0ad44661a3fc719fc28003c7b659a8b5" name="a0ad44661a3fc719fc28003c7b659a8b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ad44661a3fc719fc28003c7b659a8b5">&#9670;&#160;</a></span>clone()</h2>
 
@@ -139,13 +180,13 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">nodiscard</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creează o copie a obiectului. </p>
-<dl class="section return"><dt>Returns</dt><dd>Un pointer inteligent la o copie a obiectului. </dd></dl>
+<p>Creează o copie a jucătorului. </p>
+<dl class="section return"><dt>Returns</dt><dd>Un pointer unic către o copie a jucătorului. </dd></dl>
 
 <p>Implements <a class="el" href="class_game_entity.html#a541cfc0e307116e7fe98912d5b8edb4e">GameEntity</a>.</p>
 
@@ -174,9 +215,65 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Afișează informațiile despre entitate. </p>
+<p>Afișează informațiile despre jucător. </p>
 
 <p>Implements <a class="el" href="class_game_entity.html#ae83f4e77fbceb81406b513ec917a0993">GameEntity</a>.</p>
+
+</div>
+</div>
+<a id="a73e4ff2d70e62ca7e3be1d9b4ad9de85" name="a73e4ff2d70e62ca7e3be1d9b4ad9de85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e4ff2d70e62ca7e3be1d9b4ad9de85">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Player::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obține numele jucătorului. </p>
+<dl class="section return"><dt>Returns</dt><dd>Numele jucătorului. </dd></dl>
+
+</div>
+</div>
+<a id="acbdb2bae8d732157af0ca5f5438a2b63" name="acbdb2bae8d732157af0ca5f5438a2b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdb2bae8d732157af0ca5f5438a2b63">&#9670;&#160;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getScore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obține scorul jucătorului. </p>
+<dl class="section return"><dt>Returns</dt><dd>Scorul jucătorului. </dd></dl>
 
 </div>
 </div>

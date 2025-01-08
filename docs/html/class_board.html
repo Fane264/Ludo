@@ -91,26 +91,133 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Clasa pentru gestionarea tablei de joc.  
+<p>Clasa care reprezintă tabla de joc pentru Ludo.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_board_8h_source.html">Board.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a908b02fcd8eb1c0c9340a4afdc2dc028" id="r_a908b02fcd8eb1c0c9340a4afdc2dc028"><td class="memItemLeft" align="right" valign="top"><a id="a908b02fcd8eb1c0c9340a4afdc2dc028" name="a908b02fcd8eb1c0c9340a4afdc2dc028"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> (int players)</td></tr>
-<tr class="separator:a908b02fcd8eb1c0c9340a4afdc2dc028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca49810be20d4bcef52ef6f54609205c" id="r_aca49810be20d4bcef52ef6f54609205c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca49810be20d4bcef52ef6f54609205c">Board</a> (int players, int piecesPerPlayer)</td></tr>
+<tr class="memdesc:aca49810be20d4bcef52ef6f54609205c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor pentru clasa <a class="el" href="class_board.html" title="Clasa care reprezintă tabla de joc pentru Ludo.">Board</a>.  <br /></td></tr>
+<tr class="separator:aca49810be20d4bcef52ef6f54609205c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae43c191b41205e4b7f250bff687eb2b0" id="r_ae43c191b41205e4b7f250bff687eb2b0"><td class="memItemLeft" align="right" valign="top"><a id="ae43c191b41205e4b7f250bff687eb2b0" name="ae43c191b41205e4b7f250bff687eb2b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>displayBoard</b> () const</td></tr>
+<tr class="memdesc:ae43c191b41205e4b7f250bff687eb2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afișează starea curentă a tablei. <br /></td></tr>
 <tr class="separator:ae43c191b41205e4b7f250bff687eb2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac334ef3f1d578957907898ada346c559" id="r_ac334ef3f1d578957907898ada346c559"><td class="memItemLeft" align="right" valign="top"><a id="ac334ef3f1d578957907898ada346c559" name="ac334ef3f1d578957907898ada346c559"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>movePiece</b> (int playerId, int pieceId, int steps)</td></tr>
+<tr class="memitem:ac334ef3f1d578957907898ada346c559" id="r_ac334ef3f1d578957907898ada346c559"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac334ef3f1d578957907898ada346c559">movePiece</a> (int playerId, int pieceId, int steps)</td></tr>
+<tr class="memdesc:ac334ef3f1d578957907898ada346c559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mută o piesă a jucătorului.  <br /></td></tr>
 <tr class="separator:ac334ef3f1d578957907898ada346c559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d41fabe6a0c5dfbd45320c5a17fd0b" id="r_ac8d41fabe6a0c5dfbd45320c5a17fd0b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8d41fabe6a0c5dfbd45320c5a17fd0b">checkGameOver</a> () const</td></tr>
+<tr class="memdesc:ac8d41fabe6a0c5dfbd45320c5a17fd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifică dacă jocul s-a terminat.  <br /></td></tr>
+<tr class="separator:ac8d41fabe6a0c5dfbd45320c5a17fd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Clasa pentru gestionarea tablei de joc. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Clasa care reprezintă tabla de joc pentru Ludo. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aca49810be20d4bcef52ef6f54609205c" name="aca49810be20d4bcef52ef6f54609205c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca49810be20d4bcef52ef6f54609205c">&#9670;&#160;</a></span>Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>players</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>piecesPerPlayer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor pentru clasa <a class="el" href="class_board.html" title="Clasa care reprezintă tabla de joc pentru Ludo.">Board</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">players</td><td>Numărul de jucători. </td></tr>
+    <tr><td class="paramname">piecesPerPlayer</td><td>Numărul de piese per jucător. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac8d41fabe6a0c5dfbd45320c5a17fd0b" name="ac8d41fabe6a0c5dfbd45320c5a17fd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d41fabe6a0c5dfbd45320c5a17fd0b">&#9670;&#160;</a></span>checkGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::checkGameOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifică dacă jocul s-a terminat. </p>
+<dl class="section return"><dt>Returns</dt><dd>true dacă un jucător a câștigat, false altfel. </dd></dl>
+
+</div>
+</div>
+<a id="ac334ef3f1d578957907898ada346c559" name="ac334ef3f1d578957907898ada346c559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac334ef3f1d578957907898ada346c559">&#9670;&#160;</a></span>movePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Board::movePiece </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>playerId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pieceId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>steps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mută o piesă a jucătorului. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">playerId</td><td>ID-ul jucătorului. </td></tr>
+    <tr><td class="paramname">pieceId</td><td>ID-ul piesei de mutat. </td></tr>
+    <tr><td class="paramname">steps</td><td>Numărul de pași de mutat. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true dacă mutarea a avut loc, false altfel. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_invalid_move_exception.html" title="Excepție pentru mutări invalide.">InvalidMoveException</a></td><td>dacă mutarea nu este validă. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>Include/<a class="el" href="_board_8h_source.html">Board.h</a></li>
 <li>src/<b>Board.cpp</b></li>
 </ul>

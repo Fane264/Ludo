@@ -1,7 +1,6 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "GameException.h"
 #include "Piece.h"
 #include <vector>
 
@@ -13,12 +12,6 @@ private:
  int numPlayers; ///< Numărul de jucători.
  std::vector<std::vector<Piece>> playerPieces; ///< Matricea pieselor fiecărui jucător.
 
- /**
-  * @brief Verifică capturarea unei piese.
-  * @param playerId ID-ul jucătorului curent.
-  * @param movedPiece Referința către piesa mutată.
-  */
- void checkCapture(int playerId, const Piece& movedPiece);
 
 public:
  /**
@@ -47,7 +40,7 @@ public:
   * @brief Verifică dacă jocul s-a terminat.
   * @return true dacă un jucător a câștigat, false altfel.
   */
- bool checkGameOver() const;
+ [[nodiscard]] bool checkGameOver() const; // Marcată cu [[nodiscard]]
 };
 
 #endif // BOARD_H

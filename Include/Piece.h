@@ -1,7 +1,7 @@
 #ifndef PIECE_H
 #define PIECE_H
 
-#include <iostream>
+
 
 /**
  * @class Piece
@@ -17,7 +17,7 @@ public:
   * @brief Constructor pentru a inițializa piesa.
   * @param startPosition Poziția de start a piesei (default 0).
   */
- Piece(int startPosition = 0);
+ explicit Piece(int startPosition = 0); // Adăugat `explicit` pentru a evita conversiile implicite
 
  /**
   * @brief Mută piesa pe tablă.
@@ -30,7 +30,7 @@ public:
   * @param steps Numărul de pași verificați.
   * @return True dacă mutarea este permisă, altfel False.
   */
- bool canMove(int steps) const;
+ [[nodiscard]] bool canMove(int steps) const; // Marcată cu `[[nodiscard]]` pentru a indica utilizarea obligatorie a valorii returnate
 
  /**
   * @brief Resetează piesa la poziția inițială (bază).
@@ -41,7 +41,7 @@ public:
   * @brief Obține poziția curentă a piesei.
   * @return Poziția curentă a piesei.
   */
- int getPosition() const;
+ [[nodiscard]] int getPosition() const; // Marcată cu `[[nodiscard]]`
 
  /**
   * @brief Afișează informații despre piesă.
