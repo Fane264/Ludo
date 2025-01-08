@@ -35,7 +35,7 @@ include(cmake/CompilerFlags.cmake)
 ###############################################################################
 
 # use SYSTEM so cppcheck and clang-tidy do not report warnings from these directories
-target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE generated/include)
+target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE generated/Include)
 
 ###############################################################################
 

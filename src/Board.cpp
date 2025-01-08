@@ -18,7 +18,8 @@ void Board::displayBoard() const {
 }
 
 bool Board::movePiece(int playerId, int pieceId, int steps) {
-    if (playerId < 0 || playerId >= numPlayers || pieceId < 0 || pieceId >= playerPieces[playerId].size()) {
+    if (playerId < 0 || playerId >= numPlayers || pieceId < 0 ||
+        static_cast<std::vector<Piece>::size_type>(pieceId) >= playerPieces[playerId].size()) {
         throw std::out_of_range("Invalid player or piece ID.");
     }
 
@@ -64,5 +65,3 @@ bool Board::checkGameOver() const {
     }
     return false;
 }
-
-
