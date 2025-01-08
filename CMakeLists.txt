@@ -25,6 +25,9 @@ add_executable(${PROJECT_NAME}
         Include/GameEntity.h
         Include/GameException.h
         Include/Exceptions.h
+        Include/GameManager.h
+        Include/PieceFactory.h
+        src/GameManager.cpp
 )
 
 include(cmake/CompilerFlags.cmake)
